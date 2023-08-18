@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Account</title>
+  <link rel="stylesheet" href="userstyle.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="LogoG.png" alt="Apprend.in" id="g">
+            </div>
+        <ul>
+            <li class="item"><a href="WebDev(Project)Main.html">Home</a></li>
+            <li class="item"><a href="WebDev(Project)services.html"> Products</a></li>
+            <li class="item"><a href="WebDev(Project)Aboutus.html">About Us</a></li>
+        </ul>
+    </nav>
+  <div class="container">
+    <img src="https://cdn-icons-png.flaticon.com/512/1177/1177568.png" alt="" id="userlogo">
+    <h1>Account Information</h1>
+    <form id="accountForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" readonly>
+
+      <label for="displayName">Display name:</label>
+      <input type="text" id="displayName" readonly>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" readonly>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" readonly>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" readonly>
+
+      <button type="button" id="editBtn">Edit</button>
+      <button type="submit" id="saveBtn" style="display: none;">Save</button>
+    </form>
+    <img src="userlock.png" alt="">
+  </div>
+
+
+  <script src="userjava.js"></script>
+</body>
+
+</html>
