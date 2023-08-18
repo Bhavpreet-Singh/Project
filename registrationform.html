@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="registration.css">
+    <script src="registrationjava.js"></script>
+</head>
+<body>
+    <main>
+        <fieldset><legend>Registration Form</legend> 
+        <form id="register_form" name="register_form" action="join.html" method="get">
+            <label for="name1">Name:</label>  
+            <input type="text" id="name1" name="name1" placeholder="Enter Name">
+            <span id="name1_error">*</span><br>    
+            <label for="email1">Email Address:</label>  
+            <input type="email" id="email1" name="email1" placeholder="Enter email address">
+            <span id="email1_error">*</span><br>
+            <label for="password1">Password:</label>
+            <input type="password"   id="password1" name="password1" autocomplete="off" placeholder="Enter password">
+            <span id="password1_error">*</span><br>
+            <span id="password2_error">*</span><br>
+            <input type="button" id="join_li" value="Register">
+        </form>
+    </fieldset>
+    </main>
+</body>
+</html>
