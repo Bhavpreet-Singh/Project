@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    #itemInput, #itemSelect, #submitButton {
+        margin-bottom: 10px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 5px;
+    }
+
+    p {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+    <h1>Select the items you want to add.</h1>
+    <h1>Item List</h1>
+    
+    <select id="itemSelect">
+        <option value="Pure Protein" data-price="15.89">Pure Protein ($15.89)</option>
+        <option value="Impact Protein" data-price="20">Impact Protein ($20)</option>
+        <option value="Builder Protein" data-price="37.67">Builder Protein ($37.67)</option>
+        <option value="Kind Protein" data-price="36">Builder Protein ($36)</option>
+        <option value="Strawberries" data-price="$1.67">Strawberries ($1.67)</option>
+        <option value="Pears" data-price="$1.09">Pears ($1.09)</option>
+        <option value="Apples" data-price="$1">Apples ($1)</option>
+
+
+        <!-- Add more options as needed -->
+    </select>
+    
+    <button id="submitButton">Submit</button>
+    
+    <ul id="itemList">
+        <!-- Items will be added here -->
+    </ul>
+    
+    <p>Total Price: $<span id="totalPrice">0</span></p>
+    
+    <script>
+        const submitButton = document.getElementById("submitButton");
+        const itemSelect = document.getElementById("itemSelect");
+        const itemList = document.getElementById("itemList");
+        const totalPriceElement = document.getElementById("totalPrice");
+        
+        let totalAmount = 0;
+        
+        submitButton.addEventListener("click", () => {
+            const selectedItem = itemSelect.value;
+            const selectedPrice = parseFloat(itemSelect.options[itemSelect.selectedIndex].getAttribute("data-price"));
+            
+            if (selectedItem !== "") {
+                addItemToList(selectedItem);
+                totalAmount += selectedPrice;
+                updateTotalPrice();
+            }
+        });
+        
+        function addItemToList(item) {
+            const listItem = document.createElement("li");
+            listItem.textContent = getItemText(item);
+            itemList.appendChild(listItem);
+        }
+
+        function getItemText(item) {
+            switch (item) {
+                case "item1":
+                    return "Item 1 ($10)";
+                case "item2":
+                    return "Item 2 ($15)";
+                case "item3":
+                    return "Item 3 ($20)";
+                // Add more cases for other items
+                default:
+                    return "Item Added.";
+            }
+        }
+        
+        function updateTotalPrice() {
+            totalPriceElement.textContent = totalAmount.toFixed(2);
+        }
+    </script>
+</body>
+</html>
