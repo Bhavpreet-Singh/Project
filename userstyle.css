@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to left,lightgreen,lightyellow);
+  }
+  
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-top: 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button:active {
+    background-color: #3e8e41;
+  }
+#userlogo{ 
+    height: 80px;
+    margin-left: 160px;
+}
+:root{
+    --navbar-height: 59px;
+}
+/* Navigation Bar */
+#navbar{
+   background-image: linear-gradient(to right, lightgreen,lightgreen);
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0px;
+}
+
+
+/* Navigation Bar: Logo and Image */
+div #logo{
+    margin: 10px 34px;
+    height: 80px;
+    
+}
+
+#logo img{
+    height: 82px;
+    margin: 3px 6px;
+}
+#logo #search{ 
+    margin-right: 100px;
+}
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.0rem;
+    padding: 10px;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-top: 0.7em;
+}
+img #g{
+    height: 2em;
+    width: 2em;
+}
+
+#logo input[type=text]{
+    
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    display: inline;
+    font-size: 17px;
+    box-sizing: 5em;
+    width: 500px;
+}
+
+#navbar ul li a:hover{
+    color: red;
+    
+}
